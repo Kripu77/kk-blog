@@ -9,7 +9,6 @@ import {
     NavigationMenuItem,
     NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
-import { ModeToggle } from "./theme-toggle";
 
 interface MainNavProps {
     items: MainNavItem[];
@@ -35,9 +34,7 @@ export function MainNav({ items }: MainNavProps) {
                     </NavigationMenuItem>
                 </Link>
             ))}
-            <NavigationMenuItem>
-                <ModeToggle />
-            </NavigationMenuItem>
+            x
         </NavigationMenu>
     );
 }

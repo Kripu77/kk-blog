@@ -6,8 +6,15 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet";
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import { MainNavItem } from "@/types";
+import Link from "next/link";
 
-export function MobileNav() {
+interface MobileNavProps {
+    items: MainNavItem[];
+}
+export function MobileNav({ items }: MobileNavProps) {
     return (
         <section className="lg:hidden">
             <Sheet>
@@ -30,16 +37,18 @@ export function MobileNav() {
 
                 <SheetContent>
                     <nav className="mt-6">
-                        <ul className="space-y-4">
-                            <li>
-                                <a
-                                    href="#"
-                                    className="block p-3 rounded-md text-base font-medium text-gray-900 dark:text-gray-100 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700"
-                                >
-                                    Product
-                                </a>
-                            </li>
-                            <li></li>
+                        <ul className="space-y-4 flex flex-col">
+                            {items.map((subItem) => {
+                                return (
+                                    <Link
+                                        href={subItem.href}
+                                        key={subItem.label}
+                                        legacyBehavior
+                                    >
+                                        {subItem.label}
+                                    </Link>
+                                );
+                            })}
                         </ul>
                     </nav>
                 </SheetContent>

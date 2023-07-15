@@ -15,7 +15,7 @@ export function SiteHeader() {
                     <TypographyH3 text={siteConfig.title} />
                 </Link>
                 <MainNav items={siteConfig.navItems} />
-                <MobileNav />
+                <MobileNav items={siteConfig.navItems} />
             </div>
         </header>
     );
