@@ -20,7 +20,7 @@ export const ScrollProgressBar = () => {
         return () => {
             window.removeEventListener("scroll", calclulateScrolledHeight);
         };
-    });
+    }, [scrolledHeight]);
 
     return <Progress value={scrolledHeight} />;
 };
