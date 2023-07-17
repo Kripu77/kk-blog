@@ -55,6 +55,7 @@ export function MobileNav({ items }: MobileNavProps) {
                                     <li
                                         className="hover:shadow-lg border-b-2 pb-2"
                                         onClick={() => setIsOpen(false)}
+                                        key={subItem.label}
                                     >
                                         {" "}
                                         <Link
