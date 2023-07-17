@@ -7,7 +7,6 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import { siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils";
 import { MainNavItem } from "@/types";
 import Link from "next/link";
 
@@ -18,7 +17,7 @@ export function MobileNav({ items }: MobileNavProps) {
     return (
         <section className="lg:hidden">
             <Sheet>
-                <SheetTrigger>
+                <SheetTrigger asChild>
                     <button className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0  ">
                         <svg
                             className="h-6 w-6"
@@ -35,18 +34,27 @@ export function MobileNav({ items }: MobileNavProps) {
                     </button>
                 </SheetTrigger>
 
-                <SheetContent>
+                <SheetContent side={"left"}>
+                    <SheetHeader>
+                        <SheetTitle>{siteConfig.title}</SheetTitle>
+                        <SheetDescription>
+                            {siteConfig.description}
+                        </SheetDescription>
+                    </SheetHeader>
                     <nav className="mt-6">
                         <ul className="space-y-4 flex flex-col">
                             {items.map((subItem) => {
                                 return (
-                                    <Link
-                                        href={subItem.href}
-                                        key={subItem.label}
-                                        legacyBehavior
-                                    >
-                                        {subItem.label}
-                                    </Link>
+                                    <li className="hover:shadow-lg border-b-2 pb-2 ">
+                                        {" "}
+                                        <Link
+                                            href={subItem.href}
+                                            key={subItem.label}
+                                            legacyBehavior
+                                        >
+                                            {subItem.label}
+                                        </Link>
+                                    </li>
                                 );
                             })}
                         </ul>

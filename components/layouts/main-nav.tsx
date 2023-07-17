@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import {
     NavigationMenu,
     NavigationMenuItem,
-    NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
 
 interface MainNavProps {
