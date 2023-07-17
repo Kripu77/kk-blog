@@ -33,7 +33,6 @@ export function MainNav({ items }: MainNavProps) {
                     </NavigationMenuItem>
                 </Link>
             ))}
-            x
         </NavigationMenu>
     );
 }
