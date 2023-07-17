@@ -1,3 +1,6 @@
+"use client";
+
+import React from "react";
 import {
     Sheet,
     SheetContent,
@@ -14,9 +17,13 @@ interface MobileNavProps {
     items: MainNavItem[];
 }
 export function MobileNav({ items }: MobileNavProps) {
+    const [isOpen, setIsOpen] = React.useState(false);
     return (
         <section className="lg:hidden">
-            <Sheet>
+            <Sheet
+                open={isOpen}
+                onOpenChange={setIsOpen}
+            >
                 <SheetTrigger asChild>
                     <button className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0  ">
                         <svg
@@ -45,7 +52,10 @@ export function MobileNav({ items }: MobileNavProps) {
                         <ul className="space-y-4 flex flex-col">
                             {items.map((subItem) => {
                                 return (
-                                    <li className="hover:shadow-lg border-b-2 pb-2 ">
+                                    <li
+                                        className="hover:shadow-lg border-b-2 pb-2"
+                                        onClick={() => setIsOpen(false)}
+                                    >
                                         {" "}
                                         <Link
                                             href={subItem.href}
