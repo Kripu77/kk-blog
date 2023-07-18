@@ -25,7 +25,7 @@ const BackToTop = () => {
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         () => window.removeEventListener("scroll", handleScroll);
-    }, [currentHeight]);
+    }, []);
 
     return (
         <div>
