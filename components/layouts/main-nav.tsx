@@ -8,6 +8,8 @@ import {
     NavigationMenu,
     NavigationMenuItem,
 } from "@/components/ui/navigation-menu";
+import { ThemeToggle } from "./theme-toggle";
+
 
 interface MainNavProps {
     items: MainNavItem[];
@@ -33,6 +35,7 @@ export function MainNav({ items }: MainNavProps) {
                     </NavigationMenuItem>
                 </Link>
             ))}
+            <ThemeToggle />
         </NavigationMenu>
     );
 }
