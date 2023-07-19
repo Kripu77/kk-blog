@@ -23,6 +23,19 @@ export interface NavItemWithOptionlChildren extends NavItem {
 
 export type MainNavItem = NavItemWithChildren | NavItemWithOptionlChildren;
 
+export interface AboutConfig {
+  title: string;
+  imageLink: string;
+  description: string;
+}
+
+export interface SiteConfig {
+  title: string;
+  description: string;
+  navItems: MainNavItem[];
+  aboutConfig?: AboutConfig;
+}
+
 export interface AboutSection {
   title: string;
   imageLink: string;

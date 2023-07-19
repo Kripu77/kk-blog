@@ -1,18 +1,4 @@
-import { MainNavItem } from "@/types";
-import KripuKhadka from "@/assets/kripukhadka.webp";
-
-interface AboutConfig {
-  title: string;
-  imageLink: string;
-  description: string;
-}
-
-interface SiteConfig {
-  title: string;
-  description: string;
-  navItems: MainNavItem[];
-  aboutConfig?: AboutConfig;
-}
+import { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
   title: "kripukhadka ✨",
