@@ -4,13 +4,13 @@ import Image, { type StaticImageData } from 'next/image'
 import { TypographyH2 } from './ui/typography-h2';
 import { TypographyP } from './ui/typography-p';
 
-interface HeroSectionProps {
+interface AboutSectionProps {
   ImageLink: StaticImageData
   title:string;
   description:string;
 }
 
-export const AboutSection= ({ImageLink, title, description}:HeroSectionProps) => {
+export const AboutSection= ({ImageLink, title, description}:AboutSectionProps) => {
   return (
     <section className='max-w-screen-lg mx-auto flex flex-col items-center space-y-6 pt-24'>
       <Image src={ImageLink} alt={title}
@@ -21,7 +21,7 @@ export const AboutSection= ({ImageLink, title, description}:HeroSectionProps) =>
       <section>
         <TypographyH2 text={title}/>
       </section>
-      <section>
+      <section className="px-20 text-center">
         <TypographyP text={description}/>
       </section>
     </section>

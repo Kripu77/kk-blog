@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Icons } from "./icons";
 
 const BackToTop = () => {
@@ -11,7 +11,7 @@ const BackToTop = () => {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     };
 
-    const handleScroll = () => {
+    const handleScroll = useCallback(() => {
         const height = window.scrollY;
         setCurrentHeight(height);
 
@@ -20,12 +20,12 @@ const BackToTop = () => {
         } else {
             setShowScrollButton(false);
         }
-    };
+    }, [currentHeight]);
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [handleScroll]);
 
     return (
         <div>
