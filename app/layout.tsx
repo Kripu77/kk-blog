@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/layouts/site-header";
 import { siteConfig } from '@/config/site';
+import SiteFooter from '../components/layouts/site-footer';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +35,8 @@ export default function RootLayout({
                 >
                     <SiteHeader siteConfig={siteConfig} />
                     {children}
+             
+                    <SiteFooter footerItems={siteConfig.footerItems} />
                 </ThemeProvider>
             </body>
         </html>
