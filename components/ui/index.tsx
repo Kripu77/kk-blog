@@ -2,6 +2,8 @@ export * from "./typography-h1";
 export * from "./typography-h2";
 export * from "./typography-h3";
 export * from "./typography-p";
+export * from "./typography-small";
+export * from "./typography-large";
 export * from "./separator";
 export * from "./card";
 export * from "./button";
@@ -10,3 +12,7 @@ export * from "./dropdown-menu"
 export * from "./navigation-menu"
 export * from "./progress"
 export * from "./sheet"
+export * from "./footer-container"
+export * from "./footer-content"
+export * from "./footer-link"
+export * from "./footer-copyright"
