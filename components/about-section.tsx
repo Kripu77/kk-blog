@@ -1,5 +1,4 @@
 import React from 'react'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
 import Image, { type StaticImageData } from 'next/image'
 import { TypographyH2 } from './ui/typography-h2';
 import { TypographyP } from './ui/typography-p';

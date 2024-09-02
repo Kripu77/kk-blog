@@ -29,15 +29,39 @@ export interface AboutConfig {
   description: string;
 }
 
+export interface Authors {
+  name: string;
+  url: string;
+}
+
 export interface SiteConfig {
   title: string;
   description: string;
+  authors: Authors[];
   navItems: MainNavItem[];
   aboutConfig?: AboutConfig;
+  footerItems: FooterItems;
 }
 
 export interface AboutSection {
   title: string;
   imageLink: string;
   description: string;
+}
+
+export interface FooterItem {
+  title: string;
+  url: string;
+  description: string;
+  icon: string;
+}
+interface FooterCopyrightInfo {
+  year: number;
+  owner: string;
+}
+
+export interface FooterItems {
+  title: string;
+  items: FooterItem[];
+  footerCopyRightInfo: FooterCopyrightInfo;
 }

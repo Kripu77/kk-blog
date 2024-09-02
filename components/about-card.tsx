@@ -3,40 +3,36 @@ import Image from "next/image";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 
-interface AboutCardProps {}
+
 
 const AboutCard = () => {
   return (
     <section className="flex flex-col md:flex-row justify-between items-center max-w-screen-sm mx-auto mt-12 space-x-10 space-y-10">
-      <Card className="w-[350px] h-[250px] flex flex-col items-center justify-center">
+      <Card className="w-[350px] h-[250px] flex flex-col items-center justify-center transition ease-in delay-75 hover:border-2 hover:border-green-400">
         <CardContent>
           <p>
             {" "}
-            <span className="font-bold">🎓BIT</span> @Kent Institute Australia
+            <span className="font-semibold">🎓BIT</span> @Kent Institute Australia
           </p>
         </CardContent>
         <CardContent>
           <p>
             {" "}
-            <span className="font-bold">📍 Currently</span> @Sydney, Australia
+            <span className="font-semibold">📍 Currently</span> @Sydney, Australia
           </p>
         </CardContent>
         <CardContent>
           <p>
             {" "}
-            <span className="font-bold">💻Work</span> @Evie Networks
+            <span className="font-semibold">💻Work</span> @Evie Networks
           </p>
         </CardContent>
         <CardContent>
           <p>
             {" "}
-            <span className="font-bold">🌎Fluency</span> English, and Nepali
+            <span className="font-semibold">🌎Fluency</span> English, and Nepali
           </p>
         </CardContent>
       </Card>
