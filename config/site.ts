@@ -18,13 +18,13 @@ export const siteConfig: SiteConfig = {
     },
     {
       title: "Blogs",
-      href: "/blogs",
+      href: "https://medium.com/@khadkakripu4",
       label: "Blogs",
       description: "Blogs page",
     },
   ],
   footerItems: {
-    title: "&copy; Kripu Khadka ✨",
+    title: "© Kripu Khadka ✨",
     items: [
       {
         title: "Github",

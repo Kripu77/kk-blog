@@ -12,7 +12,7 @@ export function SiteHeader({ siteConfig }: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="container flex justify-between h-16 items-center">
-        <Link href="/" className="text-2xl font-bold leading-none">
+        <Link href="/" >
           <TypographyH3 text={siteConfig.title} />
         </Link>
 

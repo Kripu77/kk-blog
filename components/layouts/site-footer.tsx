@@ -1,7 +1,10 @@
-import { FooterItems } from "@/types";
 import React from "react";
-import { Separator } from "../ui/separator";
-import { TypographyP } from '../ui/typography-p';
+import { FooterItems } from "@/types";
+import FooterContainer from "../ui/footer-container";
+import FooterContent from "../ui/footer-content";
+import FooterCopyright from "../ui/footer-copyright";
+import FooterLinks from "../ui/footer-link";
+
 
 interface SiteFooterProps {
   footerItems: FooterItems;
@@ -9,12 +12,15 @@ interface SiteFooterProps {
 
 const SiteFooter = ({ footerItems }: SiteFooterProps) => {
   return (
-    <footer className="w-full border-t bg-background mt-20">
-      <Separator />
-      <section className="m-10">
-        <TypographyP text={footerItems.title} />
-      </section>
-    </footer>
+    <FooterContainer>
+      <FooterContent title={footerItems.title}>
+        <FooterLinks items={footerItems.items} />
+      </FooterContent>
+      <FooterCopyright
+        year={footerItems.footerCopyRightInfo.year}
+        owner={footerItems.footerCopyRightInfo.owner}
+      />
+    </FooterContainer>
   );
 };
 
