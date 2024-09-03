@@ -1,8 +1,9 @@
 import React from "react";
 import Image, { type StaticImageData } from "next/image";
-import { TypographyH2 } from "./ui/typography-h2";
 import { TypographyP } from "./ui/typography-p";
 import { motion } from "framer-motion";
+import Wave from "./ui/wave";
+import AnimatedTypographyH2 from "./ui/animated-typographyH2";
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
 const itemVariants = {
@@ -36,10 +37,13 @@ export const AboutSection = ({
           height={450}
           width={450}
           className="rounded-md object-cover"
-        ></Image>
+        />
       </motion.section>
-      <motion.section variants={itemVariants}>
-        <TypographyH2 text={title} />
+      <motion.section variants={itemVariants} className="text-center">
+        <AnimatedTypographyH2
+          text={title}
+          animatedElement={<Wave />}
+        />
       </motion.section>
       <motion.section variants={itemVariants} className="px-20 text-center">
         <TypographyP text={description} />
