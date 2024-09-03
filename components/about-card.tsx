@@ -53,6 +53,7 @@ const AboutCard = () => {
           width={288}
           height={278}
           alt="body image undraw"
+          className="dark:invert dark:sepia dark:brightness-150"
         ></Image>
       </motion.section>
     </section>
